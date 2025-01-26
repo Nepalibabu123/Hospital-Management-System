@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Hospital Management System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0066cc;
+      color: white;
+      padding: 15px 30px;
+      text-align: center;
+      position: relative;
+    }
+
+    .back-to-home {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      background-color: #e0e0e0;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .back-to-home:hover {
+      background-color: #ccc;
+    }
+
+    h2 {
+      font-size: 2.5em;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #signup-form {
+      background-color: white;
+      width: 300px;
+      padding: 20px;
+      margin: 50px auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="back-to-home">Back to Home</a>
+    <h1>Health Management System</h1>
+  </header>
+
+  <h2>Sign Up for a New Account</h2>
+
+  <div id="signup-form">
+    <form action="dashboard.html" method="GET">
+      <!-- User Information Input Fields -->
+      <input type="text" id="name" name="name" placeholder="Full Name" required>
+      <input type="email" id="email" name="email" placeholder="Email" required>
+      <input type="password" id="password" name="password" placeholder="Password" required>
+      <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+      
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Health Management System. All rights reserved.</p>
+    <nav>
+      <a href="policy.html">Policy</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </footer>
+</body>
+</html>

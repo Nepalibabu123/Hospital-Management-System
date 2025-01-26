@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Hospital Management System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0066cc;
+      color: white;
+      padding: 15px 30px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin: 20px 0;
+    }
+
+    .checkout-container {
+      width: 70%;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .checkout-container h3 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+
+    .checkout-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    .checkout-table th, .checkout-table td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .checkout-table th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: -50px 0;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      background-color: #e0e0e0;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .back-button:hover {
+      background-color: #ccc;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="javascript:history.back()" class="back-button">Back</a>
+   <h1>Hospital Management System</h1>
+  </header>
+
+  <div class="checkout-container">
+    <h3>Appointment Record</h3>
+
+    <table class="checkout-table">
+      <tr>
+        <th>Doctor Name</th>
+        <td id="doctorNameRecord"></td>
+      </tr>
+      <tr>
+        <th>Specialty</th>
+        <td id="doctorSpecialtyRecord"></td>
+      </tr>
+      <tr>
+        <th>Experience</th>
+        <td id="doctorExperienceRecord"></td>
+      </tr>
+      <tr>
+        <th>Available</th>
+        <td id="doctorAvailabilityRecord"></td>
+      </tr>
+      <tr>
+        <th>Patient Name</th>
+        <td id="patientNameRecord"></td>
+      </tr>
+      <tr>
+        <th>Age</th>
+        <td id="patientAgeRecord"></td>
+      </tr>
+      <tr>
+        <th>Gender</th>
+        <td id="patientGenderRecord"></td>
+      </tr>
+      <tr>
+        <th>Appointment Date</th>
+        <td id="appointmentDateRecord"></td>
+      </tr>
+      <tr>
+        <th>Contact Info</th>
+        <td id="patientContactRecord"></td>
+      </tr>
+    </table>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Health Management System. All rights reserved.</p>
+    <nav>
+      <a href="policy.html">Policy</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </footer>
+
+  <script>
+    // Load both doctor and patient details from localStorage and display
+    window.onload = function() {
+      document.getElementById('doctorNameRecord').innerText = localStorage.getItem('doctorName');
+      document.getElementById('doctorSpecialtyRecord').innerText = localStorage.getItem('doctorSpecialty');
+      document.getElementById('doctorExperienceRecord').innerText = localStorage.getItem('doctorExperience');
+      document.getElementById('doctorAvailabilityRecord').innerText = localStorage.getItem('doctorAvailability');
+      document.getElementById('patientNameRecord').innerText = localStorage.getItem('patientName');
+      document.getElementById('patientAgeRecord').innerText = localStorage.getItem('patientAge');
+      document.getElementById('patientGenderRecord').innerText = localStorage.getItem('patientGender');
+      document.getElementById('appointmentDateRecord').innerText = localStorage.getItem('appointmentDate');
+      document.getElementById('patientContactRecord').innerText = localStorage.getItem('patientContact');
+    }
+  </script>
+
+</body>
+</html>

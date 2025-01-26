@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Hospital Management System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0066cc;
+      color: white;
+      padding: 15px 30px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin: 20px 0;
+    }
+
+    .back-to-home {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      background-color: #e0e0e0;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .back-to-home:hover {
+      background-color: #ccc;
+    }
+
+    .dashboard-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .dashboard-box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .dashboard-box h3 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+
+    .doctor-info {
+      background-color: #f0f8ff;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    .doctor-info h4 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+
+    .doctor-info p {
+      margin: 5px 0;
+      font-size: 1.1em;
+    }
+
+    .btn {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 15px;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="back-to-home">Back to Home</a>
+    <h1>Doctor Information</h1>
+  </header>
+
+  <div class="dashboard-container">
+    <!-- Doctor 1 Info -->
+    <div class="dashboard-box">
+      <div class="doctor-info">
+        <h4>Dr. John Doe</h4>
+        <p><strong>Specialty:</strong> Cardiologist</p>
+        <p><strong>Experience:</strong> 10 years</p>
+        <p><strong>Available:</strong> Mon-Fri, 9:00 AM - 5:00 PM</p>
+      </div>
+      <a href="form.html" class="btn" onclick="saveDoctorInfo('Dr. John Doe', 'Cardiologist', '10 years', 'Mon-Fri, 9:00 AM - 5:00 PM')">Book</a>
+    </div>
+
+    <!-- Doctor 2 Info -->
+    <div class="dashboard-box">
+      <div class="doctor-info">
+        <h4>Dr. Jane Smith</h4>
+        <p><strong>Specialty:</strong> Dermatologist</p>
+        <p><strong>Experience:</strong> 8 years</p>
+        <p><strong>Available:</strong> Mon-Wed, 10:00 AM - 4:00 PM</p>
+      </div>
+      <a href="form.html" class="btn" onclick="saveDoctorInfo('Dr. Jane Smith', 'Dermatologist', '8 years', 'Mon-Wed, 10:00 AM - 4:00 PM')">Book</a>
+    </div>
+
+    <!-- Doctor 3 Info -->
+    <div class="dashboard-box">
+      <div class="doctor-info">
+        <h4>Dr. Michael Lee</h4>
+        <p><strong>Specialty:</strong> Orthopedic</p>
+        <p><strong>Experience:</strong> 12 years</p>
+        <p><strong>Available:</strong> Tue-Fri, 8:30 AM - 5:30 PM</p>
+      </div>
+      <a href="form.html" class="btn" onclick="saveDoctorInfo('Dr. Michael Lee', 'Orthopedic', '12 years', 'Tue-Fri, 8:30 AM - 5:30 PM')">Book</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Health Management System. All rights reserved.</p>
+    <nav>
+      <a href="policy.html">Policy</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </footer>
+
+  <script>
+    // Save doctor info to localStorage
+    function saveDoctorInfo(name, specialty, experience, available) {
+      localStorage.setItem('doctorName', name);
+      localStorage.setItem('doctorSpecialty', specialty);
+      localStorage.setItem('doctorExperience', experience);
+      localStorage.setItem('doctorAvailability', available);
+    }
+  </script>
+
+</body>
+</html>

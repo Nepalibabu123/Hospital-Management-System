@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointments - Health Management System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #0066cc;
+      color: white;
+      padding: 15px 30px;
+      text-align: center;
+      position: relative;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      background-color: #e0e0e0;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .back-button:hover {
+      background-color: #ccc;
+    }
+
+    h2 {
+      font-size: 2em;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .appointment-list {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .appointment-item {
+      background-color: white;
+      margin: 10px auto;
+      padding: 15px;
+      width: 70%;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .appointment-item p {
+      margin: 5px 0;
+    }
+
+    .cta-button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .cta-button:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    footer a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="javascript:history.back()" class="back-button">Back</a>
+    <h1>Doctor Information</h1>
+  </header>
+
+  <h2>Your Appointments</h2>
+
+  <div class="appointment-list">
+    <div class="appointment-item">
+      <h3>Dr. John Doe</h3>
+      <p>Date: 10th February 2025</p>
+      <p>Time: 2:00 PM</p>
+      <p>Department: Cardiology</p>
+      <a href="appointment-details.html" class="cta-button">View Details</a>
+    </div>
+
+    <div class="appointment-item">
+      <h3>Dr. Jane Smith</h3>
+      <p>Date: 15th February 2025</p>
+      <p>Time: 11:00 AM</p>
+      <p>Department: Dermatology</p>
+      <a href="appointment-details.html" class="cta-button">View Details</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Health Management System. All rights reserved.</p>
+    <nav>
+      <a href="policy.html">Policy</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </footer>
+
+</body>
+</html>
